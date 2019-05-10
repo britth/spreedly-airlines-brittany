@@ -1,0 +1,17 @@
+<body>
+<% if flash[:alert] %>
+  <div class="alert"><%= flash[:alert] %></div>
+<% elsif flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+<div class="container">
+  <div class="page-header">
+    <h1><%= "#{@flight_name}" %></h1>
+  </div>
+  <% link_text = flash[:notice] ? 'Buy Another Seat' : 'Purchase'%>
+  <p><%= link_to link_text, purchase_flight_url(name: params[:name]) %></p>
+  <p><%= link_to 'View all flights', flights_url %></p>
+</div>
+
+
+</body>

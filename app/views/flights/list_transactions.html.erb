@@ -1,0 +1,25 @@
+<div class="page-header">
+  <h1>Recent Transactions</h1>
+</div>
+<p><%= link_to 'View all flights', flights_url %></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type of transaction</th>
+      <th>Token</th>
+      <th>Created at</th>
+      <th>Status Message</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @transactions.each do |transaction| %>
+      <tr>
+        <td><%= transaction['transaction_type'] %></td>
+        <td><%= transaction['token'] %></td>
+        <td><%= transaction['created_at'] %></td>
+        <td><%= transaction['message'] %></td>
+        <td><%= %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

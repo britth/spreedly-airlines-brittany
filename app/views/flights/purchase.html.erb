@@ -1,0 +1,31 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Spreedly Sample iFrame Payment Page</title>
+  <script src="https://core.spreedly.com/iframe/iframe-v1.min.js"></script>
+</head>
+
+<body>
+  <h2><%= "You are about to purchase a seat on #{@flight_name}. Enter your payment information below to complete the transaction:" %></h2>
+  <h4> <%= "Order details: 1 seat x #{number_to_currency(@amount)}" %> </h4>
+  <%= render 'flights/payment_form', action: 'transaction' %>
+
+  <h3>Sample Cards</h3>
+  <table class="table span6">
+      <tr>
+        <th>Card Type</th>
+        <th>Good Card</th>
+        <th>Declined/Failed Card</th>
+      </tr>
+      <td>Visa</td>
+      <td>4111111111111111</td>
+      <td>4012888888881881</td>
+      <tr>
+        <td>MasterCard</td>
+        <td>5555555555554444</td>
+        <td>5105105105105100</td>
+      </tr>
+    </table>
+</body>
+</html>

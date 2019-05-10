@@ -1,0 +1,18 @@
+<table class="ui celled table">
+  <thead>
+    <tr>
+      <th>Flight Name</th>
+      <th>Cost (USD)</th>
+      <th>Buy Now!</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @flights.each do |flight| %>
+    <tr>
+      <td><%= flight.name %></td>
+      <td><%= number_to_currency(flight.cost) %></td>
+      <td><%= link_to 'Purchase', purchase_flight_url(name: flight.name.parameterize) %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
