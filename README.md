@@ -2,7 +2,7 @@
 
 To get started, add credentials (Spreedly environment key, Spreedly access secret, and test gateway and PMD gateway tokens associated with that environment) to an env.rb file. Once credentials have been added, you can run the app by starting a rails server (`rails s`) and navigating to localhost:3000.
 
-![Demo](http://recordit.co/mkZyXJdHUf)
+[Recording](http://recordit.co/mkZyXJdHUf)
 
 Notes during process:
 * I found it a little confusing at first to figure out exactly how environment keys and access secrets were associated (do you have to connect an access key to a given environment, can you use any access key that's been created with any environment key, etc). Id does make clear that you can use any access secret with any environment, but I'm under the impression that best practices would have you create a new access secret for each environment, as mentioned in the getting started guide. There could potentially be some clarification of best practices in the access secret section of Id.
